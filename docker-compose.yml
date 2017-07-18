@@ -4,6 +4,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
+            restart: always
         environment:
             #FAKE_DNS: 127.0.0.1
             PKCS11_PROXY_SOCKET: tcp://boulder-hsm:5657
@@ -59,13 +60,13 @@ services:
         command: mysqld --bind-address=0.0.0.0
         logging:
             driver: none
-    prom:
-        image: prom/prometheus
-        network_mode: bridge
-        ports:
-          - 9090:9090
-        volumes:
-          - $PWD/test/prometheus/:/promconf/
-        command: -config.file /promconf/prometheus.yml
-        links:
-          - boulder
+#    prom:
+#        image: prom/prometheus
+#        network_mode: bridge
+#        ports:
+#          - 9090:9090
+#        volumes:
+#          - $PWD/test/prometheus/:/promconf/
+#        command: -config.file /promconf/prometheus.yml
+#        links:
+#          - boulder
