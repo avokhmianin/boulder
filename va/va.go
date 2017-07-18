@@ -44,7 +44,7 @@ const (
 	maxResponseSize = 128
 )
 
-var validationTimeout = time.Second * 5
+var validationTimeout = time.Second * 30
 
 // RemoteVA wraps the core.ValidationAuthority interface and adds a field containing the addresses
 // of the remote gRPC server since the interface (and the underlying gRPC client) doesn't
