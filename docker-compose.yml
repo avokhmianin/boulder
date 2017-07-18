@@ -4,7 +4,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-            restart: always
+        restart: always
         environment:
             #FAKE_DNS: 127.0.0.1
             PKCS11_PROXY_SOCKET: tcp://boulder-hsm:5657
