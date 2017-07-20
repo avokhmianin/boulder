@@ -2,6 +2,9 @@
   "certChecker": {
     "dbConnectFile": "test/secrets/cert_checker_dburl",
     "maxDBConns": 10,
+    "features": {
+      "IDNASupport": true
+    },
     "hostnamePolicyFile": "test/hostname-policy.json"
   },
 
