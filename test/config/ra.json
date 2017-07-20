@@ -38,6 +38,10 @@
         "wfe.boulder",
         "admin-revoker.boulder"
       ]
+    },
+    "features": {
+      "IDNASupport": true,
+      "AllowKeyRollover": true
     }
   },
 
